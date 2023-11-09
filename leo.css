@@ -1,0 +1,444 @@
+/*start global rules  */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: "work sane " , sans-serif ;
+}
+/* small */
+@media(min-width:768px )
+{
+    .continer{
+        width: 750px;
+    }
+    
+}
+/* meduim */
+@media(min-width:992px  )
+{
+    .continer{
+width: 970px;
+    }
+}
+/* large */
+@media(min-width:1200px )
+{
+    .continer{
+width: 1170px;
+    }
+}
+:root{
+    --main-color :#10cab7;
+    --sec-color: #2c4755 ;
+    --color-section :#f6f6f6;
+}
+/* end global rule */
+.continer{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+header{
+    padding: 20px;
+}
+ header .continer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+margin: 0 auto;
+}
+.continer .logo{
+    width: 60px;
+}
+header .links{
+position: relative;
+}
+header .links:hover .bar-2{
+    width: 100%;
+}
+header .links:hover .link-bar {
+    display: block;
+}
+header .links .icon {
+    width: 30px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+header .continer .links .icon span{
+    background-color: rgb(82, 81, 81);
+    height: 2px;
+    margin-bottom: 5px;   
+}
+.bar-1{
+    width: 100%;
+}
+.bar-2{
+    width: 50%;
+    transition: 0.4s;
+}
+.bar-3{
+    width: 100%;
+}
+header .continer .links ul{
+    list-style:none;
+    padding : 0;
+    margin: 0;
+    background-color: #ebebeb;
+    min-width:200px;
+    position: absolute;
+    right: 0;
+    transition: 0.3s;
+    top: calc(100% + 15px);
+    display: none;
+}
+header .continer .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #ebebeb transparent;
+    right: 5px;
+    top: -20px;
+    position: absolute;
+}
+header .continer .links ul li {
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.827);
+    font-size: 20px;
+    display: block;
+    transition: 0.3s;
+}
+header .continer .links ul li:hover{
+    padding-left: 30px;
+}
+
+header .continer .links ul li:not(:last-child){
+    border-bottom: 2px solid white;
+}
+/* start landing  */
+.landing{
+    background-image: url(image/landscape-nature-outdoor-horizon-mountain-snow-883723-pxhere.com\ \(2\).jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.landing .intro-text{
+    margin: 0;
+    color: var(--main-color);
+    font-size: 50px;
+    min-width: 320px;
+    max-width: 100%;
+    text-align: center;   
+}
+.landing .définition {
+    color :black;
+    font-weight: 500;
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+}
+/* finish landing */
+/* start featrures */
+.features{
+    background-color: #f6f6f6;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+  
+}
+.features .continer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr ));
+    grid-gap: 20px;
+}
+.continer .feat{
+    text-align: center;
+    padding: 20px;
+}
+.feat p{
+    font-size: 17px;
+    line-height: 1.8;
+    color: #777;
+}
+.feat i {
+    color: var(--main-color);
+    font-size: 30px;
+}
+.feat h3{
+    font-weight: 800; 
+    margin: 30px 0 ;
+}
+/* end featrures */
+/* start section */
+.special-heading{
+ font-size: 100px;
+ text-align: center;
+ color: #ebeced;   
+ font-weight: 800;
+ letter-spacing: -3px;
+}
+.special-heading + p{
+    text-align: center;
+    margin-top: -25px;
+    font-size: 20px;
+    color: #777;
+}
+@media (max-width:768px ){
+    .special-heading{
+        font-size: 50px;
+    }
+    .special-heading + p {
+        font-size: 15px;
+        margin-top: -15px;
+    }
+}
+.service{
+    padding-top: 60px;
+    padding-bottom: 60px;
+   
+}
+.service-hold{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr ) );
+    margin-top:70px ;
+}
+.services{
+    display: flex;
+    margin: 30px 0 ;
+    flex-direction:row;
+}
+@media (max-width : 617px){
+.services{
+    flex-direction: column;
+    text-align: center;
+}
+}
+.services-text{
+    flex: 1;
+}
+.services-text p {
+    line-height: 1.8;
+    font-size: 17px;
+    color: #777;
+}
+.services-text h3 { 
+    margin:0;
+}
+
+.col .services i{
+
+color: var(--main-color);
+font-size: 20px;
+flex-basis: 60px;
+}
+ .pic-ser  {
+    display: inline-block;
+    border-style: none;
+    width: 200px;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 50px;
+    height: 250px;
+    position: relative;
+    background-image: url(image/Descending\ from\ Piz\ Bernina\ by\ Christoph\ Oberschneider\ on\ 500px\ \(1\).jpg);
+    background-size: cover;
+}
+.pic-ser::after{
+    content: "";
+    position: absolute;
+    background-color: var(--sec-color);
+    
+    width: 60px;
+    height: calc(100% + 50px);
+    top: -25px;
+    right: -30px;
+    z-index: -5;
+}
+@media(max-width: 991px ){
+    .pic-ser {
+        display: none;
+    }
+}
+/* start portfolio secion */
+.portfolio{
+    background-color: #f7f5f7;
+    padding-top: 60px;
+}
+.portfolio .portfolio-hold{
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax( 300px , 1fr ) ) ;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+margin-top: 60px;
+}
+.portfolio-hold .card{
+    
+    background-color: rgb(255, 255, 255);
+}
+
+ .portfolio-hold .card .image-portfolio {
+    width: 100%;
+    height: 300px;
+}
+
+.portfolio-hold .card .image-portfolio img{
+    width: 100%;
+    height: 300px;
+}
+.portfolio-hold .card h3{
+    line-height: 1.8;
+}
+.portfolio-hold .card p{
+    line-height: 1.6;
+    font-size: 17px;
+    color: #777;
+}
+.portfolio-hold .card .text-portfolio{
+    padding-left: 20px;
+}
+/* end portfolio section */
+/* start about section */
+.about{
+    margin-top: 30px;
+}
+.about-hold{
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+@media(max-width: 991px){
+    .about-hold{
+        flex-direction: column;
+    }
+    .about-hold .image-about::after,
+    .about-hold .image-about::before{
+        display: none;
+    }
+    .about-hold .image-about  {
+        margin: 10px auto;
+ 
+    }
+
+}
+    
+.about-hold .image-about img {
+    width: 300px;
+    position: relative;
+    height: 400px;
+}
+.about-hold .image-about{
+    position: relative;
+}
+.about-hold .image-about::after{
+    content: "";
+    width: 100px;
+    height: 80%;
+    top: -35px;
+    left: 211px;
+    z-index: -8;
+    position: absolute;
+    border-bottom: 66px solid var(--main-color);
+    border-left: 134px solid var(--main-color);
+}
+.about-hold .image-about::before{
+    content: "";
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+z-index: -10;
+left: -50px;
+    background-color: #ebeced;
+    position: absolute;
+}
+.text-about{
+    flex-basis: calc(100% - 500px);
+}
+
+.about-hold .text-about p:first-of-type{
+font-weight: bold;
+line-height: 2;
+margin-bottom: 50p;
+}
+.about-hold .text-about hr{
+    display: inline-block;
+    border-color: var(--main-color);
+    width: 50%;
+}
+.about-hold .text-about p:last-of-type{
+line-height: 2;
+color: #777;
+    font-size: 15px;
+}
+/* end about section  */
+/* start contact section */
+.contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+   background-color: var(--color-section);   
+}
+.info{
+    margin-top: 50px;
+  
+}
+.info .label{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--sec-color);
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+.info a {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 15px;
+    
+    text-decoration: none;
+}
+@media(max-width: 767px){
+    .info .label , 
+    .info a {
+        font-size: 20px;
+    }
+}
+.social{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.social i {
+    color: var(--main-color);
+    margin-left: 5px;
+}
+/* end contact section */
+/* start footer  */
+.footer{
+    padding: 20px 0 ;
+    text-align: center;
+    background-color: #2c4755;
+    color: white;
+    font-size: 20px;
+
+}
+.footer span{
+    font-weight: bold;
+    color: var(--main-color);
+}
+/* end footer  */
